@@ -14,13 +14,13 @@
     </nav>
 
     <h1>Privacy policy</h1>
-    <p class="muted">Last updated October 11, 2026</p>
+    <p class="muted">Last updated November 20, 2026</p>
 
     <p>
       Secretary Bot is a personal student project. It runs on its owner's
-      laptop, not on a company server, and is used by the owner and a few
-      friends. This page explains what it reads, what it keeps, and how to
-      delete it.
+      laptop whenever that laptop is on, not on a company server, and is used by
+      the owner and a few friends. This page explains what it reads, what it
+      keeps, who else sees any of it, and how to delete it.
     </p>
 
     <h2>What the bot reads</h2>
@@ -36,29 +36,97 @@
         calendar and build your lists.
       </li>
       <li>
-        <strong>Google Tasks (owner only):</strong> when the bot's owner signs
-        in with Google, the bot can see and edit their Google Tasks. It reads
-        task lists and tasks to show what is due, and marks a task complete when
-        it is checked off in Discord. Friends never sign in with Google.
+        <strong>Google Calendar, if you sign in:</strong> if you sign in with
+        <code>!google</code>, the bot can add, move and delete events on your
+        Google Calendar, only when you ask it to.
+      </li>
+      <li>
+        <strong>Google Tasks (owner only):</strong> the bot's owner can also let
+        it see and edit their Google Tasks: it reads task lists to show what is
+        due, and marks a task complete when it is checked off.
+      </li>
+      <li>
+        <strong>Keys and settings you give it:</strong> with
+        <code>!keys</code>, your own Groq key and where you usually leave from,
+        for bus directions.
       </li>
     </ul>
 
     <h2>What the bot keeps, and where</h2>
     <p>
-      Everything is stored in files on the owner's laptop: calendar links that
-      friends set up, which items you checked off and which quizzes you marked
-      booked (kept for 60 days), and the owner's Google sign-in. The owner can
-      open these files, so only share links with an owner you trust. Calendar
-      events and tasks are downloaded fresh each time and are not saved.
+      Everything is stored in files on the owner's laptop. The owner can open
+      these files, so only share links and keys with an owner you trust.
     </p>
+    <ul>
+      <li>
+        Your calendar links, Groq key, home place, and Google sign-in (if you
+        gave them).
+      </li>
+      <li>
+        Which items you checked off and which quizzes you marked booked (kept
+        for 60 days), reminders you set (until they are sent), and which
+        warnings and daily messages you were sent, so none is sent twice.
+      </li>
+      <li>
+        The secret part of your private dashboard link.
+      </li>
+      <li>
+        An activity log of what the bot did for each person, such as "setup
+        saved" or "reminder set", with the time. It never holds what you typed,
+        your links, keys or Discord ID: people are tagged with a code that
+        can't be turned back into who they are without a secret that stays on
+        the laptop.
+      </li>
+      <li>
+        A technical log of what the bot did and any errors, used to fix
+        problems. It is replaced as it grows.
+      </li>
+    </ul>
+    <p>
+      Calendar events and tasks are downloaded fresh each time and are not
+      saved. On your own phone or computer, the dashboard page remembers your
+      private link and the last plan it loaded, so it can still show it when the
+      bot is off; clearing that site's data in your browser removes them.
+    </p>
+
+    <h2>Who else sees any of it</h2>
+    <p>
+      To do some things, the bot sends only what is needed to these services,
+      whose own privacy policies apply:
+    </p>
+    <ul>
+      <li>
+        <strong>Groq</strong> (the AI that understands normal messages): the
+        text of messages you type that aren't <code>!</code> commands. If you
+        added your own Groq key, it also gets your upcoming calendar items to
+        answer questions like "what do I have tomorrow?". Without your own key,
+        the owner's key is used for your message text only, never your calendar.
+      </li>
+      <li>
+        <strong>OpenStreetMap</strong>: place names, such as an event's
+        location, to find the address.
+      </li>
+      <li>
+        <strong>Champaign-Urbana MTD</strong>: map positions of the places in a
+        trip, to find buses.
+      </li>
+      <li>
+        <strong>Google</strong>: requests to your own Google Calendar and Tasks,
+        when you have signed in.
+      </li>
+      <li>
+        <strong>The tunnel service that carries the dashboard</strong> to your
+        phone: your dashboard page passes through it on the way.
+      </li>
+    </ul>
 
     <h2>What the bot never does</h2>
     <ul>
-      <li>It does not sell, rent or share your data with anyone.</li>
+      <li>It does not sell, rent or share your data beyond the list above.</li>
       <li>It does not show ads or use analytics or tracking.</li>
       <li>
-        It does not use your data for anything except making your own lists and
-        reminders.
+        It does not use your data for anything except making your own lists,
+        reminders and answers.
       </li>
     </ul>
     <p>
@@ -73,8 +141,10 @@
     <h2>Deleting your data</h2>
     <ul>
       <li>
-        Send the bot <code>!forget</code> to delete your calendar links,
-        check-offs and quiz bookings.
+        Send the bot <code>!forget</code> to delete everything it keeps about
+        you: your calendar links, keys, Google sign-in, dashboard link,
+        check-offs, quiz bookings, reminders, the record of messages it sent
+        you, and your activity history.
       </li>
       <li>
         To make sure an old calendar link can't be used by anyone, reset it in
@@ -86,6 +156,10 @@
           >your Google account's third-party access page</a
         >
         and remove Secretary Bot.
+      </li>
+      <li>
+        To remove a Groq key you gave it, send <code>!keys</code> and type
+        "remove", or delete the key at console.groq.com.
       </li>
     </ul>
 
