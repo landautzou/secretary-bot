@@ -68,6 +68,18 @@
       </li>
       <li>The secret part of your private dashboard link.</li>
       <li>
+        If you turn on phone notifications in the dashboard: for each device,
+        the address its push service gave it and the keys to send to it, until
+        you turn them off.
+      </li>
+      <li>
+        From the dashboard's Tasks tab: a copy of the name, place and due date
+        of a Google Calendar task you check off there (its event is deleted, so
+        Undo can put it back), and how long a task took when you answer "How
+        long did it take?", with the kind of task (such as "Stat 200, R HW"),
+        kept for 120 days to estimate similar tasks.
+      </li>
+      <li>
         A copy of the messages the bot sends you on its own (such as the morning
         message and reminders), and what you type to it in the dashboard's Chat
         and its answers, so the dashboard can show them. The newest 300 of each
@@ -86,10 +98,11 @@
       </li>
     </ul>
     <p>
-      Calendar events and tasks are downloaded fresh each time and are not
-      saved. On your own phone or computer, the dashboard page remembers your
-      private link and the last plan it loaded, so it can still show it when the
-      bot is off; clearing that site's data in your browser removes them.
+      Apart from those task copies, calendar events and tasks are downloaded
+      fresh each time and are not saved. On your own phone or computer, the
+      dashboard page remembers your private link and the last plan it loaded, so
+      it can still show it when the bot is off; clearing that site's data in
+      your browser removes them.
     </p>
 
     <h2>Who else sees any of it</h2>
@@ -116,6 +129,12 @@
       <li>
         <strong>Google</strong>: requests to your own Google Calendar and Tasks,
         when you have signed in.
+      </li>
+      <li>
+        <strong>Your device's push service</strong> (Apple's for an iPhone,
+        Google's, Microsoft's or Mozilla's for other browsers), if you turn on
+        phone notifications: the first line of each message the bot sends you on
+        its own, encrypted so only your device can read it.
       </li>
       <li>
         <strong>The tunnel service that carries the dashboard</strong> to your
@@ -146,8 +165,10 @@
       <li>
         Send the bot <code>!forget</code> to delete everything it keeps about
         you: your calendar links, keys, Google sign-in, dashboard link,
-        check-offs, quiz bookings, reminders, the record and copies of messages
-        it sent you, your dashboard chat, and your activity history.
+        check-offs, quiz bookings, reminders, phone notification settings,
+        copies of checked-off tasks and how long tasks took, the record and
+        copies of messages it sent you, your dashboard chat, and your activity
+        history.
       </li>
       <li>
         To make sure an old calendar link can't be used by anyone, reset it in
